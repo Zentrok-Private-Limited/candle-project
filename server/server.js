@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-require('dotenv').config(); // ✅ dotenv import
+require('dotenv').config();
 
 const contactRoutes = require('./routes/contactRoutes');
 
@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// ✅ MongoDB URI (Atlas/Render ke env me se lega, warna local default)
+// MongoDB URI
 const mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/lighteningCandles';
 
 // ✅ MongoDB connection (without deprecated options)
